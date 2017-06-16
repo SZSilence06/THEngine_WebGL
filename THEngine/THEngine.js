@@ -1,9 +1,5 @@
 'use strict';
 
-import Game from 'src/Core/THGame';
-
-let THEngine = {};
-
-THEngine.Game = Game;
-
-export default THEngine;
+export * from './src/Common/THException.js'
+export * from './src/Core/THGame.js';
+export * from './src/Core/THConfig.js';

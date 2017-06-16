@@ -1,6 +1,19 @@
 'use strict';
 
-import THEngine from '../../THEngine/THEngine';
+import {Game, Exception, Config} from '../../THEngine/THEngine';
 
-alert('!');
-var game = new THEngine.Game();
+try {
+    var game = new Game();
+    let config = {}; 
+    config.fps = 60;
+    game.createGame(document.getElementById("main"), config);
+    game.run();
+}
+catch(error){
+    if(error instanceof Exception) {
+        alert(error.message);
+    }
+    else {
+        throw error;
+    }
+}
